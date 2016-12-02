@@ -13,7 +13,7 @@
 
             $file = 'app/event/' . $c . '.php';
             if (file_exists($file)) {
-                require $file; //inclui o arquivo de contexto
+                require_once $file; //inclui o arquivo de contexto
             }
         }
         $e->trigger($_POST['event'], $param); //aciona o evento solicitado
