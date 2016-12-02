@@ -9,6 +9,10 @@ var php = {
         this.context.push(c);
     },
     trigger: function (name, param, callback) {
+        if(typeof param == 'function'){
+            callback = param;
+            param = [];
+        }
         $.ajax({
             url: this.url,
             type: this.type,
