@@ -1,12 +1,12 @@
 var php = {
     url: 'eventManager.php',
     type: 'POST',
-    context:[],
+    context:{},
     dataType: 'json',
     async:true,
     result: {},
     addContext: function(c){
-        this.context.push(c);
+        this.context[c]=c;
     },
     trigger: function (name, param, callback) {
         if(typeof param == 'function'){
